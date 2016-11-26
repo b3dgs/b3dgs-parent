@@ -46,6 +46,12 @@
     <name>B3DGS Parent</name>
     <description>B3DGS maven project base</description>
     <url>https://github.com/b3dgs</url>
+    <scm>
+        <url>https://github.com/b3dgs/b3dgs</url>
+        <connection>scm:git:git@github.com:b3dgs/b3dgs.git</connection>
+        <developerConnection>scm:git:git@github.com:b3dgs/b3dgs.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <organization>
         <name>Byron 3D Games Studio</name>
         <url>http://www.b3dgs.com</url>
@@ -180,6 +186,19 @@
                             <excludeTransitive>true</excludeTransitive>
                             <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
