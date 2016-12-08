@@ -3,7 +3,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <b3dgs.version>1.0.1</b3dgs.version>
+        <b3dgs.version>1.0.2</b3dgs.version>
         <jdk.version>1.6</jdk.version>
         <jdk.home>${JDK_6_HOME}</jdk.home>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
@@ -45,7 +45,7 @@
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>B3DGS Parent</name>
     <description>B3DGS maven project base</description>
     <url>https://github.com/b3dgs</url>
@@ -338,7 +338,7 @@
                     </dependencies>
                     <configuration>
                         <propertiesLocation>../${buildtools-project}/checkstyle.properties</propertiesLocation>
-                        <propertyExpansion>dir=../${buildtools-project}</propertyExpansion>
+                        <propertyExpansion>dir=${project.basedir}/../${buildtools-project}</propertyExpansion>
                         <configLocation>../${buildtools-project}/checkstyle.xml</configLocation>
                         <headerLocation>../${buildtools-project}/header.txt</headerLocation>
                         <suppressionsLocation>../${buildtools-project}/checkstyle-suppressions.xml</suppressionsLocation>
