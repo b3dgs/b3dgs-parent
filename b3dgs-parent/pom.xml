@@ -3,7 +3,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <b3dgs.version>1.0.2</b3dgs.version>
+        <b3dgs.version>1.0.3</b3dgs.version>
         <jdk.version>1.6</jdk.version>
         <jdk.home>${JDK_6_HOME}</jdk.home>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
@@ -14,11 +14,11 @@
         <project.build.sourceEncoding>${encoding.type}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding.type}</project.reporting.outputEncoding>
         <maven.version>3.3.9</maven.version>
-        <tycho.version>0.26.0</tycho.version>
+        <tycho.version>1.0.0</tycho.version>
         <junit.version>4.12</junit.version>
-        <jacoco.version>0.7.7.201606060606</jacoco.version>
-        <maven-bundle.version>3.2.0</maven-bundle.version>
-        <maven-compiler.version>3.5.1</maven-compiler.version>
+        <jacoco.version>0.7.9</jacoco.version>
+        <maven-bundle.version>3.3.0</maven-bundle.version>
+        <maven-compiler.version>3.6.1</maven-compiler.version>
         <maven-osgi-packaging.version>0.11.1</maven-osgi-packaging.version>
         <maven-jar.version>3.0.2</maven-jar.version>
         <maven-clean.version>3.0.0</maven-clean.version>
@@ -37,15 +37,15 @@
         <maven-eclipse.version>2.10</maven-eclipse.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>1.6</maven-gpg.version>
-        <nexus-staging-maven.version>1.6.7</nexus-staging-maven.version>
-        <android.version>1.5_r3</android.version>
-        <android.sdk>3</android.sdk>
+        <nexus-staging-maven.version>1.6.8</nexus-staging-maven.version>
+        <android.version>4.0.1.2</android.version>
+        <android.sdk>14</android.sdk>
         <android.maven.version>4.0.0-rc.2</android.maven.version>
     </properties>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>B3DGS Parent</name>
     <description>B3DGS maven project base</description>
     <url>https://github.com/b3dgs</url>
@@ -407,6 +407,15 @@
                                 <classifier>${project.groupId}.base</classifier>
                             </artifact>
                         </target>
+                        <dependency-resolution>
+                            <extraRequirements>
+                                <requirement>
+                                    <type>eclipse-plugin</type>
+                                    <id>org.eclipse.equinox.event</id>
+                                    <versionRange>0.0.0</versionRange>
+                                </requirement>
+                            </extraRequirements>
+                        </dependency-resolution>
                         <environments>
                             <environment>
                                 <os>win32</os>
