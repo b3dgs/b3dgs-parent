@@ -50,6 +50,17 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
     </distributionManagement>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>snapshots-plugins</id>
+            <name>Snapshot Plugin Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
     <properties>
         <b3dgs.version>1.0.9-SNAPSHOT</b3dgs.version>
         <sonar-branch>b3dgs</sonar-branch>
