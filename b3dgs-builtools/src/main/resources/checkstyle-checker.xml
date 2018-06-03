@@ -267,9 +267,6 @@
             <property name="groups" value="java, javax, org, android, com" />
             <property name="separated" value="true" />
         </module>
-        <module name="ImportControl">
-            <property name="severity" value="ignore" />
-        </module>
         <module name="CustomImportOrder">
             <property name="severity" value="error" />
             <property name="customImportOrderRules" value="STATIC###STANDARD_JAVA_PACKAGE###SPECIAL_IMPORTS" />

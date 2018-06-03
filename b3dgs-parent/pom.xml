@@ -60,6 +60,10 @@
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </pluginRepository>
+        <pluginRepository>
+            <id>tycho-staged</id>
+            <url>https://oss.sonatype.org/content/repositories/orgeclipsetycho-1049/</url>
+        </pluginRepository>
     </pluginRepositories>
     <properties>
         <b3dgs.version>1.0.9-SNAPSHOT</b3dgs.version>
@@ -68,27 +72,26 @@
         <jdk.version>1.8</jdk.version>
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
-        <tycho.version>1.1.0</tycho.version>
-        <junit.version>5.1.1</junit.version>
-        <junit-runner.version>1.1.1</junit-runner.version>
+        <tycho.version>1.2.0</tycho.version>
+        <junit.version>5.2.0</junit.version>
+        <junit-runner.version>1.2.0</junit-runner.version>
         <jacoco.version>0.8.1</jacoco.version>
         <maven-bundle.version>3.5.0</maven-bundle.version>
         <maven-compiler.version>3.7.0</maven-compiler.version>
-        <maven-osgi-packaging.version>0.11.1</maven-osgi-packaging.version>
-        <maven-jar.version>3.0.2</maven-jar.version>
-        <maven-clean.version>3.0.0</maven-clean.version>
+        <maven-jar.version>3.1.0</maven-jar.version>
+        <maven-clean.version>3.1.0</maven-clean.version>
         <maven-source.version>3.0.1</maven-source.version>
         <maven-javadoc.version>3.0.0</maven-javadoc.version>
-        <maven-surfire.version>2.19.1</maven-surfire.version>
-        <maven-failsafe.version>2.19.1</maven-failsafe.version>
-        <maven-checkstyle.version>2.17</maven-checkstyle.version>
-        <maven-site.version>3.7</maven-site.version>
+        <maven-surfire.version>2.21.0</maven-surfire.version>
+        <maven-failsafe.version>2.21.0</maven-failsafe.version>
+        <maven-checkstyle.version>3.0.0</maven-checkstyle.version>
+        <maven-site.version>3.7.1</maven-site.version>
         <maven-deploy.version>2.8.2</maven-deploy.version>
         <maven-install.version>2.5.2</maven-install.version>
         <maven-resources.version>3.0.2</maven-resources.version>
-        <maven-dependency.version>3.1.0</maven-dependency.version>
+        <maven-dependency.version>3.1.1</maven-dependency.version>
         <maven-release.version>2.5.3</maven-release.version>
-        <checkstyle.version>8.8</checkstyle.version>
+        <checkstyle.version>8.10.1</checkstyle.version>
         <maven-eclipse.version>2.10</maven-eclipse.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>1.6</maven-gpg.version>
@@ -105,12 +108,6 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.version}</version>
@@ -120,24 +117,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.vintage</groupId>
-            <artifactId>junit-vintage-engine</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-launcher</artifactId>
-            <version>${junit-runner.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-runner</artifactId>
-            <version>${junit-runner.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -265,16 +244,14 @@
                             <version>${b3dgs.version}</version>
                         </dependency>
                     </dependencies>
-                    <configuration>
-                        <configLocation>checkstyle-checker.xml</configLocation>
-                        <headerLocation>checkstyle-header.txt</headerLocation>
-                        <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
-                    </configuration>
                     <executions>
                         <execution>
                             <id>validate</id>
-                            <phase>process-sources</phase>
+                            <phase>validate</phase>
                             <configuration>
+                                <configLocation>checkstyle-checker.xml</configLocation>
+                                <headerLocation>checkstyle-header.txt</headerLocation>
+                                <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
                                 <encoding>${encoding.type}</encoding>
                                 <consoleOutput>true</consoleOutput>
                                 <failsOnError>true</failsOnError>
@@ -373,9 +350,9 @@
                     <version>${tycho.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.sonatype.tycho</groupId>
-                    <artifactId>maven-osgi-packaging-plugin</artifactId>
-                    <version>${maven-osgi-packaging.version}</version>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-packaging-plugin</artifactId>
+                    <version>${tycho.version}</version>
                     <configuration>
                         <archive>
                             <addMavenDescriptor>false</addMavenDescriptor>
