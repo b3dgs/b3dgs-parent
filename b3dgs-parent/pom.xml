@@ -60,10 +60,6 @@
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </pluginRepository>
-        <pluginRepository>
-            <id>tycho-staged</id>
-            <url>https://oss.sonatype.org/content/repositories/orgeclipsetycho-1049/</url>
-        </pluginRepository>
     </pluginRepositories>
     <properties>
         <b3dgs.version>1.0.9-SNAPSHOT</b3dgs.version>
