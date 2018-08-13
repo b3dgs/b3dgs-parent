@@ -72,14 +72,14 @@
         <junit.version>5.2.0</junit.version>
         <junit-runner.version>1.2.0</junit-runner.version>
         <jacoco.version>0.8.1</jacoco.version>
-        <maven-bundle.version>3.5.0</maven-bundle.version>
-        <maven-compiler.version>3.7.0</maven-compiler.version>
+        <maven-bundle.version>3.5.1</maven-bundle.version>
+        <maven-compiler.version>3.8.0</maven-compiler.version>
         <maven-jar.version>3.1.0</maven-jar.version>
         <maven-clean.version>3.1.0</maven-clean.version>
         <maven-source.version>3.0.1</maven-source.version>
         <maven-javadoc.version>3.0.0</maven-javadoc.version>
-        <maven-surfire.version>2.21.0</maven-surfire.version>
-        <maven-failsafe.version>2.21.0</maven-failsafe.version>
+        <maven-surfire.version>2.22.0</maven-surfire.version>
+        <maven-failsafe.version>2.22.0</maven-failsafe.version>
         <maven-checkstyle.version>3.0.0</maven-checkstyle.version>
         <maven-site.version>3.7.1</maven-site.version>
         <maven-deploy.version>2.8.2</maven-deploy.version>
@@ -87,12 +87,12 @@
         <maven-resources.version>3.0.2</maven-resources.version>
         <maven-dependency.version>3.1.1</maven-dependency.version>
         <maven-release.version>2.5.3</maven-release.version>
-        <checkstyle.version>8.10.1</checkstyle.version>
+        <checkstyle.version>8.11</checkstyle.version>
         <maven-eclipse.version>2.10</maven-eclipse.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>1.6</maven-gpg.version>
         <nexus-staging-maven.version>1.6.8</nexus-staging-maven.version>
-        <maven-enforcer-plugin.version>3.0.0-M1</maven-enforcer-plugin.version>
+        <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
         <sonar-maven-plugin.version>3.4.0.905</sonar-maven-plugin.version>
         <radial-encapsulation-maven-plugin.version>1.0.1</radial-encapsulation-maven-plugin.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
