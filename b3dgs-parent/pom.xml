@@ -87,7 +87,7 @@
         <maven-resources.version>3.0.2</maven-resources.version>
         <maven-dependency.version>3.1.1</maven-dependency.version>
         <maven-release.version>2.5.3</maven-release.version>
-        <checkstyle.version>8.11</checkstyle.version>
+        <checkstyle.version>8.12</checkstyle.version>
         <maven-eclipse.version>2.10</maven-eclipse.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>1.6</maven-gpg.version>
