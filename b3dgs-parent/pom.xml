@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-parent</artifactId>
-    <version>1.0.9-SNAPSHOT</version>
+    <version>1.0.9</version>
     <packaging>pom</packaging>
     <name>B3DGS Parent</name>
     <description>B3DGS maven project base</description>
@@ -62,7 +62,7 @@
         </pluginRepository>
     </pluginRepositories>
     <properties>
-        <b3dgs.version>1.0.9-SNAPSHOT</b3dgs.version>
+        <b3dgs.version>1.0.9</b3dgs.version>
         <sonar-branch>b3dgs</sonar-branch>
         <radial.base-package>com.b3dgs</radial.base-package>
         <jdk.version>1.8</jdk.version>
