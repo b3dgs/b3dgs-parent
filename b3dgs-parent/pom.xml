@@ -74,12 +74,12 @@
         <jacoco.version>0.8.2</jacoco.version>
         <maven-bundle.version>4.1.0</maven-bundle.version>
         <maven-compiler.version>3.8.0</maven-compiler.version>
-        <maven-jar.version>3.1.0</maven-jar.version>
+        <maven-jar.version>3.1.1</maven-jar.version>
         <maven-clean.version>3.1.0</maven-clean.version>
         <maven-source.version>3.0.1</maven-source.version>
         <maven-javadoc.version>3.0.1</maven-javadoc.version>
-        <maven-surfire.version>3.0.0-M2</maven-surfire.version>
-        <maven-failsafe.version>3.0.0-M2</maven-failsafe.version>
+        <maven-surfire.version>3.0.0-M3</maven-surfire.version>
+        <maven-failsafe.version>3.0.0-M3</maven-failsafe.version>
         <maven-checkstyle.version>3.0.0</maven-checkstyle.version>
         <maven-site.version>3.7.1</maven-site.version>
         <maven-deploy.version>3.0.0-M1</maven-deploy.version>
