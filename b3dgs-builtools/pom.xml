@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-buildtools</artifactId>
+    <version>1.1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <version>1.1.0</version>
     <name>B3DGS Buildtools</name>
     <description>B3DGS build tools</description>
     <url>https://github.com/b3dgs</url>
