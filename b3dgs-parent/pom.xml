@@ -517,8 +517,8 @@
                             <goal>prepare-agent</goal>
                         </goals>
                         <configuration>
-                            <destFile>${project.basedir}/../target/jacoco-ut.exec</destFile>
-                            <dataFile>${project.basedir}/../target/jacoco-ut.exec</dataFile>
+                            <destFile>${project.basedir}/../target/jacoco.exec</destFile>
+                            <dataFile>${project.basedir}/../target/jacoco.exec</dataFile>
                             <append>true</append>
                         </configuration>
                     </execution>
@@ -529,8 +529,8 @@
                             <goal>report</goal>
                         </goals>
                         <configuration>
-                            <destFile>${project.basedir}/../target/jacoco-ut.exec</destFile>
-                            <dataFile>${project.basedir}/../target/jacoco-ut.exec</dataFile>
+                            <destFile>${project.basedir}/../target/jacoco.exec</destFile>
+                            <dataFile>${project.basedir}/../target/jacoco.exec</dataFile>
                             <append>true</append>
                         </configuration>
                     </execution>
@@ -541,8 +541,8 @@
                             <goal>prepare-agent</goal>
                         </goals>
                         <configuration>
-                            <destFile>${project.basedir}/../target/jacoco-it.exec</destFile>
-                            <dataFile>${project.basedir}/../target/jacoco-it.exec</dataFile>
+                            <destFile>${project.basedir}/../target/jacoco.exec</destFile>
+                            <dataFile>${project.basedir}/../target/jacoco.exec</dataFile>
                             <append>true</append>
                         </configuration>
                     </execution>
@@ -553,8 +553,8 @@
                             <goal>report</goal>
                         </goals>
                         <configuration>
-                            <destFile>${project.basedir}/../target/jacoco-it.exec</destFile>
-                            <dataFile>${project.basedir}/../target/jacoco-it.exec</dataFile>
+                            <destFile>${project.basedir}/../target/jacoco.exec</destFile>
+                            <dataFile>${project.basedir}/../target/jacoco.exec</dataFile>
                             <append>true</append>
                         </configuration>
                     </execution>
