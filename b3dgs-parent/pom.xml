@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-parent</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1</version>
     <packaging>pom</packaging>
     <name>B3DGS Parent</name>
     <description>B3DGS maven project base</description>
