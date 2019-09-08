@@ -92,7 +92,7 @@
         <maven-gpg.version>1.6</maven-gpg.version>
         <nexus-staging-maven.version>1.6.8</nexus-staging-maven.version>
         <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
-        <sonar-maven-plugin.version>3.6.0.1398</sonar-maven-plugin.version>
+        <sonar-maven-plugin.version>3.6.1.1688</sonar-maven-plugin.version>
         <radial-encapsulation-maven-plugin.version>1.0.1</radial-encapsulation-maven-plugin.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
