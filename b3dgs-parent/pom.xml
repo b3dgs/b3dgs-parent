@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-parent</artifactId>
-    <version>1.1.4</version>
+    <version>1.1.5</version>
     <packaging>pom</packaging>
     <name>B3DGS Parent</name>
     <description>B3DGS maven project base</description>
@@ -90,37 +90,37 @@
         </pluginRepository>
     </pluginRepositories>
     <properties>
-        <b3dgs.version>1.1.4</b3dgs.version>
+        <b3dgs.version>1.1.5</b3dgs.version>
         <sonar-branch>b3dgs</sonar-branch>
         <radial.base-package>com.b3dgs</radial.base-package>
         <jdk.version>1.8</jdk.version>
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
-        <tycho.version>1.4.0</tycho.version>
-        <junit.version>5.5.1</junit.version>
-        <junit-runner.version>1.5.1</junit-runner.version>
-        <jacoco.version>0.8.4</jacoco.version>
+        <tycho.version>1.5.1</tycho.version>
+        <junit.version>5.5.2</junit.version>
+        <junit-runner.version>1.5.2</junit-runner.version>
+        <jacoco.version>0.8.5</jacoco.version>
         <maven-bundle.version>4.2.1</maven-bundle.version>
         <maven-compiler.version>3.8.1</maven-compiler.version>
-        <maven-jar.version>3.1.1</maven-jar.version>
+        <maven-jar.version>3.2.0</maven-jar.version>
         <maven-clean.version>3.1.0</maven-clean.version>
-        <maven-source.version>3.1.0</maven-source.version>
+        <maven-source.version>3.2.1</maven-source.version>
         <maven-javadoc.version>3.1.1</maven-javadoc.version>
-        <maven-surfire.version>3.0.0-M3</maven-surfire.version>
-        <maven-failsafe.version>3.0.0-M3</maven-failsafe.version>
+        <maven-surfire.version>3.0.0-M4</maven-surfire.version>
+        <maven-failsafe.version>3.0.0-M4</maven-failsafe.version>
         <maven-checkstyle.version>3.1.0</maven-checkstyle.version>
         <maven-site.version>3.8.2</maven-site.version>
         <maven-deploy.version>3.0.0-M1</maven-deploy.version>
         <maven-install.version>3.0.0-M1</maven-install.version>
         <maven-resources.version>3.1.0</maven-resources.version>
         <maven-dependency.version>3.1.1</maven-dependency.version>
-        <maven-release.version>2.5.3</maven-release.version>
-        <checkstyle.version>8.18</checkstyle.version>
+        <maven-release.version>3.0.0-M1</maven-release.version>
+        <checkstyle.version>8.26</checkstyle.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>1.6</maven-gpg.version>
         <nexus-staging-maven.version>1.6.8</nexus-staging-maven.version>
-        <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
-        <sonar-maven-plugin.version>3.6.1.1688</sonar-maven-plugin.version>
+        <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
+        <sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
         <radial-encapsulation-maven-plugin.version>1.0.1</radial-encapsulation-maven-plugin.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
