@@ -236,3 +236,5 @@ takeable
 hurtable
 drownable
 actioner
+wetsuit
+platformer

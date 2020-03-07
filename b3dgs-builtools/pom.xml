@@ -4,19 +4,19 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-buildtools</artifactId>
-    <version>1.1.5</version>
+    <version>1.1.6-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>B3DGS Buildtools</name>
     <description>B3DGS build tools</description>
     <url>https://github.com/b3dgs</url>
     <organization>
         <name>Byron 3D Games Studio</name>
-        <url>http://www.b3dgs.com</url>
+        <url>https://www.b3dgs.com</url>
     </organization>
     <licenses>
         <license>
             <name>GNU General Public License (GPL) version 3.0</name>
-            <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+            <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -25,9 +25,9 @@
             <id>DjThunder</id>
             <name>Pierre-Alexandre</name>
             <email>contact@b3dgs.com</email>
-            <url>http://www.b3dgs.com</url>
+            <url>https://www.b3dgs.com</url>
             <organization>Byron 3D Games Studio</organization>
-            <organizationUrl>http://www.b3dgs.com</organizationUrl>
+            <organizationUrl>https://www.b3dgs.com</organizationUrl>
             <roles>
                 <role>developer</role>
             </roles>
@@ -57,10 +57,10 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+        <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
-        <maven-release-plugin.version>3.7.0.1746</maven-release-plugin.version>
+        <maven-release-plugin.version>3.0.0-M1</maven-release-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-gpg.version>1.6</maven-gpg.version>
     </properties>

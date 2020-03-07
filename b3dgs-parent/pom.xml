@@ -4,19 +4,19 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-parent</artifactId>
-    <version>1.1.5</version>
+    <version>1.1.6-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>B3DGS Parent</name>
     <description>B3DGS maven project base</description>
     <url>https://github.com/b3dgs</url>
     <organization>
         <name>Byron 3D Games Studio</name>
-        <url>http://www.b3dgs.com</url>
+        <url>https://www.b3dgs.com</url>
     </organization>
     <licenses>
         <license>
             <name>GNU General Public License (GPL) version 3.0</name>
-            <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+            <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -25,9 +25,9 @@
             <id>DjThunder</id>
             <name>Pierre-Alexandre</name>
             <email>contact@b3dgs.com</email>
-            <url>http://www.b3dgs.com</url>
+            <url>https://www.b3dgs.com</url>
             <organization>Byron 3D Games Studio</organization>
-            <organizationUrl>http://www.b3dgs.com</organizationUrl>
+            <organizationUrl>https://www.b3dgs.com</organizationUrl>
             <roles>
                 <role>developer</role>
             </roles>
@@ -55,7 +55,7 @@
             <id>central</id>
             <name>Maven Repository</name>
             <layout>default</layout>
-            <url>http://repo1.maven.org/maven2</url>
+            <url>https://repo1.maven.org/maven2</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -74,7 +74,7 @@
         <pluginRepository>
             <id>central-plugins</id>
             <name>Releases Plugin Repository</name>
-            <url>http://repo1.maven.org/maven2</url>
+            <url>https://repo1.maven.org/maven2</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -90,15 +90,15 @@
         </pluginRepository>
     </pluginRepositories>
     <properties>
-        <b3dgs.version>1.1.5</b3dgs.version>
+        <b3dgs.version>1.1.6-SNAPSHOT</b3dgs.version>
         <sonar-branch>b3dgs</sonar-branch>
         <radial.base-package>com.b3dgs</radial.base-package>
         <jdk.version>1.8</jdk.version>
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
-        <tycho.version>1.5.1</tycho.version>
-        <junit.version>5.5.2</junit.version>
-        <junit-runner.version>1.5.2</junit-runner.version>
+        <tycho.version>1.6.0</tycho.version>
+        <junit.version>5.6.0</junit.version>
+        <junit-runner.version>1.6.0</junit-runner.version>
         <jacoco.version>0.8.5</jacoco.version>
         <maven-bundle.version>4.2.1</maven-bundle.version>
         <maven-compiler.version>3.8.1</maven-compiler.version>
@@ -108,14 +108,14 @@
         <maven-javadoc.version>3.1.1</maven-javadoc.version>
         <maven-surfire.version>3.0.0-M4</maven-surfire.version>
         <maven-failsafe.version>3.0.0-M4</maven-failsafe.version>
-        <maven-checkstyle.version>3.1.0</maven-checkstyle.version>
+        <maven-checkstyle.version>3.1.1</maven-checkstyle.version>
         <maven-site.version>3.8.2</maven-site.version>
         <maven-deploy.version>3.0.0-M1</maven-deploy.version>
         <maven-install.version>3.0.0-M1</maven-install.version>
         <maven-resources.version>3.1.0</maven-resources.version>
         <maven-dependency.version>3.1.1</maven-dependency.version>
         <maven-release.version>3.0.0-M1</maven-release.version>
-        <checkstyle.version>8.26</checkstyle.version>
+        <checkstyle.version>8.29</checkstyle.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>1.6</maven-gpg.version>
         <nexus-staging-maven.version>1.6.8</nexus-staging-maven.version>
