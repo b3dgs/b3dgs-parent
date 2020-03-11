@@ -128,6 +128,7 @@
         <working.dir>${project.basedir}</working.dir>
         <project.build.sourceEncoding>${encoding.type}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding.type}</project.reporting.outputEncoding>
+        <aggregate.report.dir>target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
     </properties>
     <dependencies>
         <dependency>
@@ -512,12 +513,6 @@
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <goals>
-                            <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
