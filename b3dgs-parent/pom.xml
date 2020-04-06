@@ -96,8 +96,8 @@
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
         <tycho.version>1.6.0</tycho.version>
-        <junit.version>5.6.0</junit.version>
-        <junit-runner.version>1.6.0</junit-runner.version>
+        <junit.version>5.6.1</junit.version>
+        <junit-runner.version>1.6.1</junit-runner.version>
         <jacoco.version>0.8.5</jacoco.version>
         <maven-bundle.version>4.2.1</maven-bundle.version>
         <maven-compiler.version>3.8.1</maven-compiler.version>
@@ -114,7 +114,7 @@
         <maven-resources.version>3.1.0</maven-resources.version>
         <maven-dependency.version>3.1.2</maven-dependency.version>
         <maven-release.version>3.0.0-M1</maven-release.version>
-        <checkstyle.version>8.29</checkstyle.version>
+        <checkstyle.version>8.30</checkstyle.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>1.6</maven-gpg.version>
         <nexus-staging-maven.version>1.6.8</nexus-staging-maven.version>
@@ -129,6 +129,7 @@
         <project.reporting.outputEncoding>${encoding.type}</project.reporting.outputEncoding>
         <aggregate.report.dir>target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
         <report.dir>target/site/jacoco/jacoco.xml</report.dir>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/${report.dir}</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
     <dependencies>
         <dependency>
@@ -486,7 +487,15 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
