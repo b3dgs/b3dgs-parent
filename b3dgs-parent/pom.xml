@@ -105,8 +105,8 @@
         <maven-clean.version>3.1.0</maven-clean.version>
         <maven-source.version>3.2.1</maven-source.version>
         <maven-javadoc.version>3.2.0</maven-javadoc.version>
-        <maven-surfire.version>3.0.0-M5</maven-surfire.version>
-        <maven-failsafe.version>3.0.0-M5</maven-failsafe.version>
+        <maven-surfire.version>3.0.0-M4</maven-surfire.version>
+        <maven-failsafe.version>3.0.0-M4</maven-failsafe.version>
         <maven-checkstyle.version>3.1.1</maven-checkstyle.version>
         <maven-site.version>3.9.1</maven-site.version>
         <maven-deploy.version>3.0.0-M1</maven-deploy.version>
