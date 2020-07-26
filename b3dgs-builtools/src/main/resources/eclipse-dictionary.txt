@@ -238,3 +238,4 @@ drownable
 actioner
 wetsuit
 platformer
+teleported
