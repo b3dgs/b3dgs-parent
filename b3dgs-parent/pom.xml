@@ -250,6 +250,7 @@
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>${maven-javadoc.version}</version>
                     <configuration>
+                        <detectJavaApiLink>false</detectJavaApiLink>
                         <show>protected</show>
                         <nohelp>true</nohelp>
                     </configuration>
