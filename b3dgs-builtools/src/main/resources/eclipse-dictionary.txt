@@ -239,3 +239,4 @@ actioner
 wetsuit
 platformer
 teleported
+destroyable
