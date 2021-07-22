@@ -93,7 +93,6 @@
         <sonar-branch>b3dgs</sonar-branch>
         <radial.base-package>com.b3dgs</radial.base-package>
         <jdk.version>1.8</jdk.version>
-        <maven.compiler.release>8</maven.compiler.release>
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
         <tycho.version>2.3.0</tycho.version>
@@ -199,7 +198,6 @@
                     <configuration>
                         <source>${jdk.version}</source>
                         <target>${jdk.version}</target>
-                        <release>${maven.compiler.release}</release>
                         <encoding>${encoding.type}</encoding>
                         <showDeprecation>true</showDeprecation>
                         <showWarnings>true</showWarnings>
