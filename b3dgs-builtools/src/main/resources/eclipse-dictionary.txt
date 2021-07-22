@@ -249,3 +249,5 @@ joystick
 extro
 backcolor
 multi
+catapult
+gamepad
