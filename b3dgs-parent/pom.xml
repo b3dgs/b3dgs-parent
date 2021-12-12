@@ -96,8 +96,8 @@
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
         <tycho.version>2.3.0</tycho.version>
-        <junit.version>5.8.1</junit.version>
-        <junit-runner.version>1.8.1</junit-runner.version>
+        <junit.version>5.8.2</junit.version>
+        <junit-runner.version>1.8.2</junit-runner.version>
         <jacoco.version>0.8.7</jacoco.version>
         <maven-bundle.version>5.1.2</maven-bundle.version>
         <maven-compiler.version>3.8.1</maven-compiler.version>
@@ -105,8 +105,8 @@
         <maven-clean.version>3.1.0</maven-clean.version>
         <maven-source.version>3.2.1</maven-source.version>
         <maven-javadoc.version>3.3.1</maven-javadoc.version>
-        <maven-surfire.version>3.0.0-M5</maven-surfire.version>
-        <maven-failsafe.version>3.0.0-M5</maven-failsafe.version>
+        <maven-surfire.version>3.0.0-M4</maven-surfire.version>
+        <maven-failsafe.version>3.0.0-M4</maven-failsafe.version>
         <maven-checkstyle.version>3.1.2</maven-checkstyle.version>
         <maven-site.version>3.9.1</maven-site.version>
         <maven-deploy.version>3.0.0-M1</maven-deploy.version>
@@ -119,7 +119,7 @@
         <maven-gpg.version>1.6</maven-gpg.version>
         <nexus-staging-maven.version>1.6.8</nexus-staging-maven.version>
         <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
-        <sonar-maven-plugin.version>3.9.0.2155</sonar-maven-plugin.version>
+        <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
         <radial-encapsulation-maven-plugin.version>1.0.1</radial-encapsulation-maven-plugin.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
