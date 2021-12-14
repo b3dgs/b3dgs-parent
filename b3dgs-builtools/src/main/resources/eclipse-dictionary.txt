@@ -251,3 +251,4 @@ backcolor
 multi
 catapult
 gamepad
+awt
