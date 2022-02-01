@@ -252,3 +252,4 @@ multi
 catapult
 gamepad
 awt
+mapper
