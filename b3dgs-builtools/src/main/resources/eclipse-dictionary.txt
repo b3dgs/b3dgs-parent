@@ -253,3 +253,5 @@ catapult
 gamepad
 awt
 mapper
+payload
+invincibility
