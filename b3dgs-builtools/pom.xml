@@ -62,7 +62,7 @@
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
         <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
         <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
-        <maven-gpg.version>1.6</maven-gpg.version>
+        <maven-gpg.version>3.0.1</maven-gpg.version>
     </properties>
     <build>
         <pluginManagement>
