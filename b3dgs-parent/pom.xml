@@ -117,6 +117,7 @@
         <checkstyle.version>9.3</checkstyle.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>3.0.1</maven-gpg.version>
+        <maven-jarsigner.version>3.0.0</maven-jarsigner.version>
         <nexus-staging-maven.version>1.6.13</nexus-staging-maven.version>
         <maven-enforcer-plugin.version>3.1.0</maven-enforcer-plugin.version>
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
@@ -166,6 +167,35 @@
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jarsigner-plugin</artifactId>
+                    <version>${maven-jarsigner.version}</version>
+                    <configuration>
+                        <keystore>${keystore}</keystore>
+                        <alias>${keystore.alias}</alias>
+                        <storepass>${keystore.pass}</storepass>
+                        <keypass>${keystore.key}</keypass>
+                        <arguments>
+                            <argument>-tsa</argument>
+                            <argument>http://timestamp.digicert.com</argument>
+                        </arguments>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>sign</id>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>verify</id>
+                            <goals>
+                                <goal>verify</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
