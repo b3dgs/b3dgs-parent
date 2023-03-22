@@ -95,6 +95,7 @@
         <jdk.version>1.8</jdk.version>
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
+        <jna.version>5.0.0</jna.version>
         <tycho.version>3.0.4</tycho.version>
         <junit.version>5.9.2</junit.version>
         <junit-runner.version>1.9.2</junit-runner.version>
