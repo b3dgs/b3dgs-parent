@@ -102,6 +102,7 @@
         <jacoco.version>0.8.8</jacoco.version>
         <maven-bundle.version>5.1.8</maven-bundle.version>
         <maven-compiler.version>3.11.0</maven-compiler.version>
+        <maven-toolchains.version>3.1.0</maven-toolchains.version>
         <maven-jar.version>3.3.0</maven-jar.version>
         <maven-clean.version>3.2.0</maven-clean.version>
         <maven-source.version>3.2.1</maven-source.version>
@@ -228,6 +229,25 @@
                         <showDeprecation>true</showDeprecation>
                         <showWarnings>true</showWarnings>
                         <fork>true</fork>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-toolchains-plugin</artifactId>
+                    <version>${maven-toolchains.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>toolchain</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <toolchains>
+                            <jdk>
+                                <version>${jdk.version}</version>
+                            </jdk>
+                        </toolchains>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -392,8 +412,8 @@
                     <version>${tycho.version}</version>
                     <configuration>
                         <compilerArguments>
-                            <inlineJSR />
-                            <enableJavadoc />
+                            <inlineJSR/>
+                            <enableJavadoc/>
                             <encoding>${encoding.type}</encoding>
                         </compilerArguments>
                     </configuration>
@@ -450,7 +470,7 @@
                         <instructions>
                             <Import-Package>org.junit;resolution:=optional, *</Import-Package>
                             <Bundle-RequiredExecutionEnvironment>JavaSE-${jdk.version}</Bundle-RequiredExecutionEnvironment>
-                            <_removeheaders>Build-Jdk,Built-By,Bnd-LastModified,Created-By,Private-Package,Tool,Require-Capability</_removeheaders>
+                            <_removeheaders>Build-Jdk,Build-Jdk-Spec,Built-By,Bnd-LastModified,Created-By,Private-Package,Tool,Require-Capability</_removeheaders>
                         </instructions>
                     </configuration>
                     <executions>
