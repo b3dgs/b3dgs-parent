@@ -93,13 +93,14 @@
         <sonar-branch>b3dgs</sonar-branch>
         <radial.base-package>com.b3dgs</radial.base-package>
         <jdk.version>1.8</jdk.version>
+        <jdk-toolchain.version>8</jdk-toolchain.version>
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
         <jna.version>5.0.0</jna.version>
         <tycho.version>3.0.4</tycho.version>
         <junit.version>5.9.2</junit.version>
         <junit-runner.version>1.9.2</junit-runner.version>
-        <jacoco.version>0.8.8</jacoco.version>
+        <jacoco.version>0.8.9</jacoco.version>
         <maven-bundle.version>5.1.8</maven-bundle.version>
         <maven-compiler.version>3.11.0</maven-compiler.version>
         <maven-toolchains.version>3.1.0</maven-toolchains.version>
@@ -111,11 +112,11 @@
         <maven-failsafe.version>3.0.0</maven-failsafe.version>
         <maven-checkstyle.version>3.2.1</maven-checkstyle.version>
         <maven-site.version>3.12.1</maven-site.version>
-        <maven-deploy.version>3.1.0</maven-deploy.version>
-        <maven-install.version>3.1.0</maven-install.version>
-        <maven-resources.version>3.3.0</maven-resources.version>
+        <maven-deploy.version>3.1.1</maven-deploy.version>
+        <maven-install.version>3.1.1</maven-install.version>
+        <maven-resources.version>3.3.1</maven-resources.version>
         <maven-dependency.version>3.5.0</maven-dependency.version>
-        <maven-release.version>3.0.0-M7</maven-release.version>
+        <maven-release.version>3.0.0</maven-release.version>
         <checkstyle.version>9.3</checkstyle.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>3.0.1</maven-gpg.version>
@@ -245,7 +246,7 @@
                     <configuration>
                         <toolchains>
                             <jdk>
-                                <version>${jdk.version}</version>
+                                <version>${jdk-toolchain.version}</version>
                             </jdk>
                         </toolchains>
                     </configuration>
