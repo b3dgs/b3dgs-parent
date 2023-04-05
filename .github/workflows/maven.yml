@@ -11,14 +11,9 @@ on:
 
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-        jdk: [8]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     env:
-      JDK_VERSION: ${{ matrix.jdk }}
+      JDK_VERSION: 8
 
     steps:
      - name: Checkout
@@ -28,19 +23,19 @@ jobs:
        uses: actions/cache@v3.3.1
        with:
           path: ~/.m2/repository
-          key: maven-${{ matrix.os }}-java${{ matrix.jdk }}-${{ hashFiles('pom.xml') }}
-          restore-keys: |
-            maven-${{ matrix.os }}-java${{ matrix.jdk }}-
-            maven-${{ matrix.os }}-
+          key: maven-${{ hashFiles('pom.xml') }}
 
      - name: Set JDK
        uses: actions/setup-java@v3.11.0
        with:
          java-version: |
-           ${{ env.JDK_VERSION }}
+           8
          distribution: 'temurin'
          mvn-toolchain-id: |
            JavaSE-1.8
+         server-id: ossrh
+         server-username: MAVEN_USERNAME
+         server-password: MAVEN_PASSWORD
 
      - name: Import GPG key
        uses: crazy-max/ghaction-import-gpg@v5.2.0
@@ -49,6 +44,7 @@ jobs:
          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
      - name: Compile
-       uses: coactions/setup-xvfb@v1
-       with:
-         run: mvn clean deploy -U -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -Prelease
+       run: mvn clean deploy -U -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -Prelease
+       env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
