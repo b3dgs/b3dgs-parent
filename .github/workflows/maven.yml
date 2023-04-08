@@ -44,7 +44,8 @@ jobs:
          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
      - name: Compile
-       run: mvn clean deploy -U -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -Prelease
+       run: mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:sonar deploy -U -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -Prelease -Dsonar.organization=b3dgs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=b3dgs_b3dgs-parent
        env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
