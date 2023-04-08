@@ -44,8 +44,37 @@ jobs:
          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
      - name: Compile
-       run: mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:sonar deploy -U -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -Prelease -Dsonar.organization=b3dgs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=b3dgs_b3dgs-parent
+       run: mvn clean deploy -U -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -Prelease
        env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+
+  sonar:
+    runs-on: windows-latest
+    env:
+      JDK_VERSION: 17
+
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v3.5.0
+
+     - name: Cache
+       uses: actions/cache@v3.3.1
+       with:
+          path: ~/.m2/repository
+          key: maven-${{ hashFiles('pom.xml') }}
+
+     - name: Set JDK
+       uses: actions/setup-java@v3.11.0
+       with:
+         java-version: |
+           17
+         distribution: 'temurin'
+         mvn-toolchain-id: |
+           JavaSE-17
+
+     - name: Compile
+       run: mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:sonar verify -U -Dsonar.organization=b3dgs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=b3dgs_b3dgs-parent
+       env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
