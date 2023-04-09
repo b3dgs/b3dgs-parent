@@ -132,9 +132,6 @@
         <working.dir>${project.basedir}</working.dir>
         <project.build.sourceEncoding>${encoding.type}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding.type}</project.reporting.outputEncoding>
-        <aggregate.report.dir>target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
-        <report.dir>target/site/jacoco/jacoco.xml</report.dir>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/${report.dir}</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
     <dependencies>
         <dependency>
@@ -585,6 +582,11 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <configuration>
+                            <formats>
+                                <format>XML</format>
+                            </formats>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
