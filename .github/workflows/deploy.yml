@@ -50,7 +50,6 @@ jobs:
                 "id": "maven-default-http-blocker",
                 "mirrorOf": "external:dont-match-anything-mate:*",
                 "url": "http://0.0.0.0/"
-                "blocked": "false"
               }
             ]
           output_file: .m2/settings.xml
