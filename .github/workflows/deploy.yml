@@ -30,7 +30,7 @@ jobs:
           key: maven-${{ hashFiles('pom.xml') }}
           
      - name: maven-settings-xml-action
-       run: echo "<settings><mirrors><mirror><id>maven-default-http-blocker</id><mirrorOf>external:dont-match-anything-mate:*</mirrorOf><name>Pseudo repo.</name><url>http://0.0.0.0/</url><blocked>false</blocked></mirror></mirrors></settings>" > ~/.m2/settings.xml
+       run: mkdir ~/.m2 | echo "<settings><mirrors><mirror><id>maven-default-http-blocker</id><mirrorOf>external:dont-match-anything-mate:*</mirrorOf><name>Pseudo repo.</name><url>http://0.0.0.0/</url><blocked>false</blocked></mirror></mirrors></settings>" > ~/.m2/settings.xml
 
      - name: Set JDK
        uses: actions/setup-java@v3.11.0
