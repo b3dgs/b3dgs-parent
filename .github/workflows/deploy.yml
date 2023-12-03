@@ -29,6 +29,11 @@ jobs:
           path: ~/.m2/repository
           key: maven-${{ hashFiles('pom.xml') }}
 
+     - name: Maven
+       uses: stCarolas/setup-maven@v4.5
+       with:
+         maven-version: 3.9.6
+
      - name: Set JDK
        uses: actions/setup-java@v3.11.0
        with:
@@ -72,6 +77,11 @@ jobs:
        with:
           path: ~/.m2/repository
           key: maven-${{ hashFiles('pom.xml') }}
+
+     - name: Maven
+       uses: stCarolas/setup-maven@v4.5
+       with:
+         maven-version: 3.9.6
 
      - name: Set JDK
        uses: actions/setup-java@v3.11.0
