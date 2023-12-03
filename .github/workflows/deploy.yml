@@ -82,6 +82,9 @@ jobs:
          mvn-toolchain-id: |
            JavaSE-17
 
+     - name: maven-settings-xml-action
+       run: cat ~/.m2/settings.xml | echo "<settings><mirrors><mirror><id>maven-default-http-blocker</id><mirrorOf>external:dont-match-anything-mate:*</mirrorOf><name>Pseudo repo.</name><url>http://0.0.0.0/</url><blocked>false</blocked></mirror></mirrors></settings>" > ~/.m2/settings.xml
+
      - name: Compile
        run: mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:sonar verify -U -Dsonar.organization=b3dgs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=b3dgs_b3dgs-parent
        env:
