@@ -87,6 +87,11 @@
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </pluginRepository>
+        <pluginRepository>
+            <id>checkstyle-backport-jre8-maven</id>
+            <name>checkstyle-backport-jre8-maven</name>
+            <url>http://rnveach.github.io/checkstyle-backport-jre8/maven2</url>
+        </pluginRepository>
     </pluginRepositories>
     <properties>
         <b3dgs.version>2.0.0-SNAPSHOT</b3dgs.version>
@@ -117,7 +122,7 @@
         <maven-resources.version>3.3.1</maven-resources.version>
         <maven-dependency.version>3.6.1</maven-dependency.version>
         <maven-release.version>3.0.1</maven-release.version>
-        <checkstyle.version>9.3</checkstyle.version>
+        <checkstyle.version>10.10.0</checkstyle.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>3.1.0</maven-gpg.version>
         <maven-jarsigner.version>3.0.0</maven-jarsigner.version>
@@ -322,7 +327,7 @@
                     <dependencies>
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
-                            <artifactId>checkstyle</artifactId>
+                            <artifactId>checkstyle-backport-jre8</artifactId>
                             <version>${checkstyle.version}</version>
                         </dependency>
                         <dependency>
