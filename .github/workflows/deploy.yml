@@ -46,9 +46,6 @@ jobs:
          server-username: MAVEN_USERNAME
          server-password: MAVEN_PASSWORD
 
-     - name: maven-settings-xml-action
-       run: cat ~/.m2/settings.xml | echo "<settings><servers><server><id>ossrh</id><username>"${{ secrets.MAVEN_USERNAME }}"</username><password>"${{ secrets.MAVEN_PASSWORD }}"</password></server></servers><mirrors><mirror><id>maven-default-http-blocker</id><mirrorOf>external:dont-match-anything-mate:*</mirrorOf><name>Pseudo repo.</name><url>http://0.0.0.0/</url><blocked>false</blocked></mirror></mirrors></settings>" > ~/.m2/settings.xml
-
      - name: Import GPG key
        uses: crazy-max/ghaction-import-gpg@v6.0.0
        with:
@@ -91,9 +88,6 @@ jobs:
          distribution: 'temurin'
          mvn-toolchain-id: |
            JavaSE-17
-
-     - name: maven-settings-xml-action
-       run: cat ~/.m2/settings.xml | echo "<settings><mirrors><mirror><id>maven-default-http-blocker</id><mirrorOf>external:dont-match-anything-mate:*</mirrorOf><name>Pseudo repo.</name><url>http://0.0.0.0/</url><blocked>false</blocked></mirror></mirrors></settings>" > ~/.m2/settings.xml
 
      - name: Compile
        run: mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:sonar verify -U -Dsonar.organization=b3dgs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=b3dgs_b3dgs-parent
