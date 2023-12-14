@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-parent</artifactId>
     <version>2.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>B3DGS Parent</name>
-    <description>B3DGS maven project base</description>
+    <description>B3DGS Parent</description>
     <url>https://github.com/b3dgs</url>
     <organization>
         <name>Byron 3D Games Studio</name>
@@ -49,45 +51,6 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
     </distributionManagement>
-    <repositories>
-        <repository>
-            <id>central</id>
-            <name>Maven Repository</name>
-            <layout>default</layout>
-            <url>https://repo1.maven.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>snapshots</id>
-            <name>Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>central-plugins</id>
-            <name>Releases Plugin Repository</name>
-            <url>https://repo1.maven.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>snapshots-plugins</id>
-            <name>Snapshot Plugin Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
     <properties>
         <maven-minimum.version>3.0</maven-minimum.version>
         <b3dgs.version>2.0.0-SNAPSHOT</b3dgs.version>
@@ -175,6 +138,45 @@
             <version>${b3dgs.version}</version>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Repository</name>
+            <layout>default</layout>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snapshots</id>
+            <name>Snapshot Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central-plugins</id>
+            <name>Releases Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>snapshots-plugins</id>
+            <name>Snapshot Plugin Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
     <build>
         <pluginManagement>
             <plugins>
@@ -459,7 +461,8 @@
                         <instructions>
                             <Import-Package>org.junit;resolution:=optional, *</Import-Package>
                             <Bundle-RequiredExecutionEnvironment>JavaSE-${jdk.version}</Bundle-RequiredExecutionEnvironment>
-                            <_removeheaders>Build-Jdk,Build-Jdk-Spec,Built-By,Bnd-LastModified,Created-By,Private-Package,Tool,Require-Capability</_removeheaders>
+                            <_removeheaders>
+                                Build-Jdk,Build-Jdk-Spec,Built-By,Bnd-LastModified,Created-By,Private-Package,Tool,Require-Capability</_removeheaders>
                         </instructions>
                     </configuration>
                     <executions>
@@ -637,7 +640,7 @@
     </build>
     <profiles>
         <profile>
-            <id>release</id>
+            <id>sign</id>
             <build>
                 <plugins>
                     <plugin>
