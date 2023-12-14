@@ -53,7 +53,7 @@ jobs:
          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
      - name: Compile
-       run: mvn clean deploy -U -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -Prelease
+       run: mvn clean deploy -U -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -Psign
        env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
