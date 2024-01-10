@@ -57,7 +57,7 @@
         <jdk.version>17</jdk.version>
         <jdk-release.version>17</jdk-release.version>
         <encoding.type>UTF-8</encoding.type>
-        <slf4j.version>2.0.10</slf4j.version>
+        <slf4j.version>2.0.11</slf4j.version>
         <jna.version>5.0.0</jna.version>
         <tycho.version>4.0.4</tycho.version>
         <junit.version>5.10.1</junit.version>
@@ -69,8 +69,8 @@
         <maven-clean.version>3.3.2</maven-clean.version>
         <maven-source.version>3.3.0</maven-source.version>
         <maven-javadoc.version>3.6.3</maven-javadoc.version>
-        <maven-surfire.version>3.2.3</maven-surfire.version>
-        <maven-failsafe.version>3.2.3</maven-failsafe.version>
+        <maven-surfire.version>3.2.5</maven-surfire.version>
+        <maven-failsafe.version>3.2.5</maven-failsafe.version>
         <maven-checkstyle.version>3.3.1</maven-checkstyle.version>
         <maven-site.version>3.12.1</maven-site.version>
         <maven-deploy.version>3.1.1</maven-deploy.version>
@@ -361,7 +361,6 @@
                     <artifactId>target-platform-configuration</artifactId>
                     <version>${tycho.version}</version>
                     <configuration>
-                        <resolver>p2</resolver>
                         <pomDependencies>wrapAsBundle</pomDependencies>
                         <executionEnvironment>JavaSE-${jdk.version}</executionEnvironment>
                         <target>
