@@ -53,11 +53,11 @@ jobs:
          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
      - name: Compile
-       run: mvn clean deploy -U -Dgpg.passphrase="$GPG_PASS" -Psign
+       run: mvn clean deploy -U -Psign
        env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-          GPG_PASS: ${{ secrets.GPG_PASSPHRASE }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 
   sonar:
     runs-on: ubuntu-latest
