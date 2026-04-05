@@ -94,4 +94,3 @@ jobs:
        run: mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:sonar verify -U -Dsonar.organization=b3dgs -Dsonar.host.url=https://sonarcloud.io -Dsonar.token="$SONAR_TOKEN" -Dsonar.projectKey=b3dgs_b3dgs-parent
        env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
