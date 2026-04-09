@@ -54,7 +54,7 @@
     <properties>
         <maven-minimum.version>3.0</maven-minimum.version>
         <encoding.type>UTF-8</encoding.type>
-        <jdk.version>25</jdk.version>
+        <jdk.version>17</jdk.version>
         <maven-bundle.version>6.0.2</maven-bundle.version>
         <maven-compiler.version>3.15.0</maven-compiler.version>
         <maven-jar.version>3.5.0</maven-jar.version>
@@ -637,12 +637,29 @@
     </build>
     <profiles>
         <profile>
+            <id>jdk25</id>
+            <properties>
+                <jdk.version>25</jdk.version>
+            </properties>
+        </profile>
+        <profile>
             <id>sign</id>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>sonar</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonarsource.scanner.maven</groupId>
+                        <artifactId>sonar-maven-plugin</artifactId>
                     </plugin>
                 </plugins>
             </build>
