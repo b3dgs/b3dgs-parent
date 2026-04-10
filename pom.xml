@@ -456,7 +456,8 @@
                             <Bundle-RequiredExecutionEnvironment>
                                 JavaSE-${jdk.version}</Bundle-RequiredExecutionEnvironment>
                             <_removeheaders>
-                                Build-Jdk,Build-Jdk-Spec,Built-By,Bnd-LastModified,Created-By,Private-Package,Tool,Require-Capability</_removeheaders>
+                                Build-Jdk,Build-Jdk-Spec,Built-By,Bnd-LastModified,Created-By,
+                                Private-Package,Tool,Require-Capability</_removeheaders>
                         </instructions>
                     </configuration>
                     <executions>
