@@ -73,7 +73,7 @@
         <checkstyle.version>12.3.1</checkstyle.version>
         <pde-target-maven.version>1.0.1</pde-target-maven.version>
         <maven-gpg.version>3.2.8</maven-gpg.version>
-        <maven-jarsigner.version>3.0.0</maven-jarsigner.version>
+        <maven-jarsigner.version>3.1.0</maven-jarsigner.version>
         <nexus-staging-maven.version>1.7.0</nexus-staging-maven.version>
         <maven-enforcer-plugin.version>3.6.2</maven-enforcer-plugin.version>
         <sonar-maven-plugin.version>5.5.0.6356</sonar-maven-plugin.version>
@@ -86,6 +86,7 @@
         <tycho.version>4.0.4</tycho.version>
         <junit.version>6.0.3</junit.version>
         <jacoco.version>0.8.14</jacoco.version>
+        <plexus-utils.version>3.6.1</plexus-utils.version>
         <radial.base-package>com.b3dgs</radial.base-package>
         <maven.compiler.release>${jdk.version}</maven.compiler.release>
         <working.dir>${project.basedir}</working.dir>
@@ -168,6 +169,13 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jarsigner-plugin</artifactId>
                     <version>${maven-jarsigner.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.codehaus.plexus</groupId>
+                            <artifactId>plexus-utils</artifactId>
+                            <version>${plexus-utils.version}</version>
+                        </dependency>
+                    </dependencies>
                     <executions>
                         <execution>
                             <id>sign</id>
