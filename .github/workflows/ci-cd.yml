@@ -1,0 +1,97 @@
+name: CI/CD
+
+on:
+   push:
+      branches:
+      - master
+   pull_request:
+      branches:
+      - master
+
+defaults:
+   run:
+      shell: pwsh
+
+env:
+   MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+   MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+   MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+
+jobs:
+   ci-cd:
+      runs-on: ubuntu-latest
+      steps:
+
+      -  name: Checkout
+         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+         with:
+            fetch-depth: 1
+            fetch-tags: false
+
+      -  name: Cache Maven
+         uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7
+         with:
+            path: ~/.m2/repository
+            key: maven-${{ hashFiles('**/pom.xml') }}
+            restore-keys: maven-
+
+      -  name: Setup Java
+         uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
+         with:
+            java-version: 17
+            distribution: temurin
+
+      -  name: Set up Maven
+         uses: stCarolas/setup-maven@12eb41b233df95d49b0c11fc1b5bc8312e5d4ce0
+         with:
+            maven-version: 3.9.14
+
+      -  name: Import GPG
+         if: github.event_name == 'push'
+         uses: crazy-max/ghaction-import-gpg@2dc316deee8e90f13e1a351ab510b4d5bc0c82cd
+         with:
+            gpg_private_key: ${{ secrets.GPG_B64 }}
+            passphrase: ${{ env.MAVEN_GPG_PASSPHRASE }}
+
+      -  name: Maven settings
+         if: github.event_name == 'push'
+         uses: s4u/maven-settings-action@894661b3ddae382f1ae8edbeab60987e08cf0788
+         with:
+            servers: |
+               [
+                 {
+                   "id": "ossrh",
+                   "username": "${{ env.MAVEN_USERNAME }}",
+                   "password": "${{ env.MAVEN_PASSWORD }}",
+                   "passphrase": "${{ env.MAVEN_GPG_PASSPHRASE }}"
+                 }
+               ]
+
+      -  name: Sonar
+         env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+         run: |
+            $mvnArgs = @(
+              "clean",
+              "verify",
+              "sonar:sonar",
+              "-B",
+              "-P",
+             "sonar",
+              "-Dsonar.host.url=https://sonarcloud.io",
+              "-Dsonar.organization=b3dgs",
+              "-Dsonar.token=$env:SONAR_TOKEN",
+              "-Dsonar.projectKey=b3dgs_b3dgs-parent"
+            )
+            & mvn @mvnArgs
+
+      -  name: Deploy
+         if: github.event_name == 'push'
+         run: |-
+            $mvnArgs = @(
+              "deploy",
+              "-B",
+              "-P",
+              "sign"
+            )
+            & mvn @mvnArgs
