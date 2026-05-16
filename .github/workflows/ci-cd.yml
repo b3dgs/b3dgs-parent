@@ -60,7 +60,7 @@ jobs:
             servers: |
                [
                  {
-                   "id": "ossrh",
+                   "id": "central",
                    "username": "${{ env.MAVEN_USERNAME }}",
                    "password": "${{ env.MAVEN_PASSWORD }}",
                    "passphrase": "${{ env.MAVEN_GPG_PASSPHRASE }}"

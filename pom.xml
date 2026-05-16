@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-parent</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>2.0.0</version>
     <packaging>pom</packaging>
     <name>B3DGS Parent</name>
     <description>B3DGS Parent</description>
@@ -43,13 +43,9 @@
     </scm>
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh</id>
+            <id>central</id>
             <url>https://central.sonatype.com/repository/maven-snapshots</url>
         </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://ossrh-staging-api.central.sonatype.com</url>
-        </repository>
     </distributionManagement>
     <properties>
         <maven-minimum.version>3.0</maven-minimum.version>
@@ -80,10 +76,11 @@
         <radial-encapsulation-maven-plugin.version>1.0.2</radial-encapsulation-maven-plugin.version>
         <maven.resources.overwrite>false</maven.resources.overwrite>
         <buildtools-project>b3dgs-parent</buildtools-project>
-        <b3dgs.version>2.0.0-SNAPSHOT</b3dgs.version>
+        <b3dgs.version>2.0.0</b3dgs.version>
         <slf4j.version>2.0.17</slf4j.version>
         <jna.version>5.0.0</jna.version>
         <tycho.version>4.0.4</tycho.version>
+        <central-publishing-maven-plugin.version>0.10.0</central-publishing-maven-plugin.version>
         <junit.version>6.0.3</junit.version>
         <jacoco.version>0.8.14</jacoco.version>
         <plexus-utils.version>3.6.1</plexus-utils.version>
@@ -439,14 +436,14 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <groupId>org.sonatype.plugins</groupId>
-                    <artifactId>nexus-staging-maven-plugin</artifactId>
-                    <version>${nexus-staging-maven.version}</version>
+                    <groupId>org.sonatype.central</groupId>
+                    <artifactId>central-publishing-maven-plugin</artifactId>
+                    <version>${central-publishing-maven-plugin.version}</version>
                     <extensions>true</extensions>
                     <configuration>
-                        <serverId>ossrh</serverId>
-                        <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        <publishingServerId>central</publishingServerId>
+                        <autoPublish>true</autoPublish>
+                        <waitUntil>published</waitUntil>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -657,6 +654,10 @@
             <id>sign</id>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
