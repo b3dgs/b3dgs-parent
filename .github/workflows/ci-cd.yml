@@ -81,8 +81,7 @@ jobs:
               "-Dsonar.host.url=https://sonarcloud.io",
               "-Dsonar.organization=b3dgs",
               "-Dsonar.token=$env:SONAR_TOKEN",
-              "-Dsonar.projectKey=b3dgs_b3dgs-parent",
-              "-Dsonar.scanner.skipJreProvisioning=true"
+              "-Dsonar.projectKey=b3dgs_b3dgs-parent"
             )
             & mvn @mvnArgs
 
